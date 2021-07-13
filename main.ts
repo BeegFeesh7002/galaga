@@ -57,7 +57,6 @@ game.onUpdateInterval(500, function() {
         . . . . . . . . . . . . . . . .
     `, SpriteKind.Enemy)
     alien.setPosition(160, randint(0, 120))
-    alien.setVelocity(-20,0)
     if(info.score() >= 10) {
         alien.setVelocity (-40, 0)
     } else {
