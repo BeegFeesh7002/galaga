@@ -58,7 +58,11 @@ game.onUpdateInterval(500, function() {
     `, SpriteKind.Enemy)
     alien.setPosition(160, randint(0, 120))
     alien.setVelocity(-20,0)
-
+    if(info.score() >= 10) {
+        alien.setVelocity (-40, 0)
+    } else {
+        alien.setVelocity (-20, 0)
+    }
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function(sprite, otherSprite) {
     sprite.destroy()
@@ -90,3 +94,9 @@ controller.B.onEvent(ControllerButtonEvent.Pressed,function() {
         . . . . . . . . . . . . . . . .
     `,  ship, 200, 0)
 })
+
+if(info.score() >= 10) {
+
+} else {
+    
+}
